@@ -17,3 +17,4 @@ def gerar_matriz(num_linhas,num_colunas):
 linhas = int(input("Informe o número de linhas que a matriz terá: "))
 colunas = int(input("Informe o número de colunas que a matriz terá: "))
 matriz = gerar_matriz(linhas,colunas)
+print(matriz)

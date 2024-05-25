@@ -20,13 +20,14 @@ def imprimir_matriz(matriz):
 
 def soma_pares_matriz(matriz):
     soma_pares = 0
-    for elemento_sorteado in matriz:
-        if elemento_sorteado % 2 == 0:
-            soma_pares += elemento_sorteado
+    for linha in matriz:
+        for elemento_sorteado in linha:
+            if elemento_sorteado % 2 == 0:
+                soma_pares += elemento_sorteado
     return soma_pares
 
 linhas = int(input("Informe o número de linhas que a matriz terá: "))
 colunas = int(input("Informe o número de colunas que a matriz terá: "))
 matriz = gerar_matriz(linhas,colunas)
 imprimir_matriz(matriz)
-soma_pares_matriz(matriz)
+print(f"A soma dos número pares da matriz é: {soma_pares_matriz(matriz)}")
