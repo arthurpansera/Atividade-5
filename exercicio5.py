@@ -18,17 +18,17 @@ def imprimir_matriz(matriz):
     for linha in matriz:
         print(linha)
 
-def soma_coluna(matriz,coluna):
-    soma_num_coluna = 0
-    for linha in matriz:
-        soma_num_coluna += linha[coluna]
-    return soma_num_coluna
+def soma_linha(matriz,linha):
+    soma_num_linha = 0
+    for elemento_sorteado in matriz[linha]:
+        soma_num_linha += elemento_sorteado
+    return soma_num_linha
 
 linhas = int(input("Informe o número de linhas que a matriz terá: "))
 colunas = int(input("Informe o número de colunas que a matriz terá: "))
 matriz = gerar_matriz(linhas,colunas)
 imprimir_matriz(matriz)
-coluna = int(input("Escolha uma coluna da matriz para somar os elementos: "))
-while coluna > colunas or coluna <= 0:
-        coluna = int(input("Coluna inexistente! Escolha uma coluna da matriz para somar os elementos: "))
-print(f"A soma dos números da {coluna}º coluna é: {soma_coluna(matriz,coluna-1)}")
+linha = int(input("Escolha uma linha da matriz para somar os elementos: "))
+while linha > linhas or linha <= 0:
+        linha = int(input("Linha inexistente! Escolha uma linha da matriz para somar os elementos: "))
+print(f"A soma dos números da {linha}º linha é: {soma_linha(matriz,linha-1)}")
