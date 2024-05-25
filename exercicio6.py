@@ -2,8 +2,6 @@
 #Aluno: Arthur Rodrigues Pansera
 #Turma: C
 
-import random
-
 def gerar_matriz(num_linhas,num_colunas):
     matriz = []
     for i in range(num_linhas):
